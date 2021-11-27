@@ -19,15 +19,15 @@ export function useCount() {
   return count;
 }
 
-export function useIncrement() {
-  const { state, send } = useContractFunction(contract, "incrementCount", {});
-  return { state, send };
-}
+// export function useIncrement() {
+//   const { state, send } = useContractFunction(contract, "incrementCount", {});
+//   return { state, send };
+// }
 
-export function useSetCount() {
-  const { state, send } = useContractFunction(contract, "setCount", {});
-  return { state, send };
-}
+// export function useSetCount() {
+//   const { state, send } = useContractFunction(contract, "setCount", {});
+//   return { state, send };
+// }
 
 export function useContractMethod(methodName: string) {
   const { state, send } = useContractFunction(contract, methodName, {});

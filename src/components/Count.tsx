@@ -51,21 +51,7 @@ export default function Count() {
       <Button colorScheme="teal" size="lg" onClick={handleIncrement}>
         Increment
       </Button>
-      <Box mt={4}>
-        <NumberInput
-          mb={2}
-          min={1}
-          value={input}
-          onChange={handleInput}
-          color="white"
-          clampValueOnBlur={false}
-        >
-          <NumberInputField />
-        </NumberInput>
-        <Button isFullWidth colorScheme="purple" onClick={handleTwoVariables}>
-          Set Count
-        </Button>
-      </Box>
+
     </Flex>
   );
 }
