@@ -6,6 +6,7 @@ import {
   Button,
   NumberInput,
   NumberInputField,
+  Input,
 } from "@chakra-ui/react";
 import { useCount, useContractMethod } from "../hooks";
 import { utils } from "ethers";
@@ -43,15 +44,28 @@ export default function Count() {
     setInput(valueAsString);
   }
 
+
   return (
     <Flex direction="column" align="center" mt="4">
       <Text color="white" fontSize="8xl">
-        {count ? count.toNumber() : 0}
+        {count ? count.toNumber() : 'No data from Blockchain'}
       </Text>
-      <Button colorScheme="teal" size="lg" onClick={handleIncrement}>
-        Increment
-      </Button>
+      <Text color="white" fontSize="3xl">
+        {'Titles registered so far'}
+      </Text>
 
+      <Box mt={4}>
+        <Input
+          color="white"
+          placeholder='Must be unique number' >
+
+        </Input>
+        <Input focusBorderColor='lime' placeholder='Title in Kannada' />
+        <Input focusBorderColor='lime' placeholder='Title in English' />
+        <Button isFullWidth colorScheme="purple" onClick={handleTwoVariables}>
+          Register
+        </Button>
+      </Box>
     </Flex>
   );
 }
